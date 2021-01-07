@@ -11,7 +11,13 @@ export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
   
   constructor() { }
-
+  shouldShowWarning = function(entry) {
+    if (entry === "Space Debris") {
+      return true
+    } else {
+      return false
+    }
+  }
   ngOnInit() {
   }
 
